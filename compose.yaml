@@ -1,0 +1,29 @@
+# Local development stack: `docker compose up --build`
+#   frontend -> http://localhost:5173   (Vite dev server, HMR)
+#   backend  -> http://localhost:8000   (FastAPI, --reload)
+# Both mount your source, so edits on the host reload inside the containers.
+
+services:
+  backend:
+    build: ./backend
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - ./backend:/app
+    environment:
+      CORS_ORIGINS: http://localhost:5173
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    command: npm run dev -- --host 0.0.0.0
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      # Inside the compose network the backend is reachable by service name.
+      VITE_PROXY_TARGET: http://backend:8000
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend

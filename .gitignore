@@ -1,0 +1,34 @@
+# --- Node / frontend ---
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+*.local
+
+# --- Python / backend ---
+__pycache__/
+*.py[cod]
+.venv/
+backend/.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+backend/contact_messages.jsonl
+
+# --- Env / secrets ---
+.env
+.env.*
+!.env.example
+
+# --- PII / personal docs (keep out of the public repo) ---
+*.pdf
+*resume*
+*Resume*
+*cv*
+contact_messages.jsonl
+
+# --- Editor / OS ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
