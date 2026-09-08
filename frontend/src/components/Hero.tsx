@@ -7,7 +7,7 @@ export function Hero({ content }: { content: SiteContent }) {
   const style: CSSProperties | undefined = content.hero.image
     ? {
         backgroundImage:
-          `linear-gradient(180deg, rgba(20,24,33,0.15), rgba(20,24,33,0.45)), ` +
+          `linear-gradient(180deg, rgba(18,22,31,0.32), rgba(18,22,31,0.58)), ` +
           `url(${asset(content.hero.image)})`,
       }
     : undefined;

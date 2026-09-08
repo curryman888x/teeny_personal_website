@@ -134,7 +134,7 @@ a {
   padding: 24px;
   background-color: var(--navy);
   background-size: cover;
-  background-position: center;
+  background-position: center 22%;
   color: #fff;
   position: relative;
 }
@@ -257,6 +257,7 @@ a {
   height: 240px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 62%;
   flex-shrink: 0;
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
 }
