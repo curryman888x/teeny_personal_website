@@ -23,7 +23,8 @@ class ProjectItem(BaseModel):
     name: str
     description: str
     tech: list[str] = Field(default_factory=list)
-    url: str | None = None
+    url: str | None = None  # live demo / primary link
+    repo: str | None = None  # source code
 
 
 class Profile(BaseModel):

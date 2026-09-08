@@ -164,6 +164,22 @@ a {
   color: var(--text-muted);
 }
 
+.card__links {
+  display: flex;
+  gap: 16px;
+  margin: 12px 0 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.card__links a {
+  text-decoration: none;
+}
+
+.card__links a:hover {
+  text-decoration: underline;
+}
+
 /* --- Tags --- */
 .tags {
   list-style: none;

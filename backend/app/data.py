@@ -77,17 +77,32 @@ PROFILE = Profile(
     ],
     projects=[
         ProjectItem(
+            name="boba_joints",
+            description="A weekly-refreshed census of NYC boba shops — location, open/closed "
+            "status, and rough first-operating date. Discovers shops from Yelp's bubbletea "
+            "category over an adaptive geo-grid, links them to NYC DOHMH inspection records by "
+            "name + distance, and assigns boroughs via PostGIS. Runs as a GitHub Actions cron "
+            "against a persistent Neon Postgres, with contract checks and drift warnings on "
+            "every ingest; Streamlit + Plotly dashboard.",
+            tech=[
+                "Python",
+                "PostgreSQL / PostGIS",
+                "SQLAlchemy",
+                "Alembic",
+                "Streamlit",
+                "Plotly",
+                "Docker",
+                "GitHub Actions",
+                "Neon",
+            ],
+            url="https://bobajoints-dhemy8pwj2epnyv2iyv9je.streamlit.app/",
+            repo="https://github.com/curryman888x/boba_joints",
+        ),
+        ProjectItem(
             name="This website",
             description="React + TypeScript front end, FastAPI backend, uv-managed. "
             "Content is served from a small JSON API.",
             tech=["React", "TypeScript", "Vite", "FastAPI", "uv"],
-            url=None,
-        ),
-        ProjectItem(
-            name="Add your projects here",
-            description="Edit backend/app/data.py to list what you want to show off.",
-            tech=["Python"],
-            url=None,
         ),
     ],
     skills=[

@@ -9,16 +9,9 @@ export function Projects({ items }: { items: ProjectItem[] }) {
       <div className="cards">
         {items.map((project) => (
           <article key={project.name} className="card">
-            <h3 className="card__title">
-              {project.url ? (
-                <a href={project.url} target="_blank" rel="noreferrer">
-                  {project.name}
-                </a>
-              ) : (
-                project.name
-              )}
-            </h3>
+            <h3 className="card__title">{project.name}</h3>
             <p className="card__body">{project.description}</p>
+
             {project.tech.length > 0 && (
               <ul className="tags">
                 {project.tech.map((t) => (
@@ -27,6 +20,21 @@ export function Projects({ items }: { items: ProjectItem[] }) {
                   </li>
                 ))}
               </ul>
+            )}
+
+            {(project.url || project.repo) && (
+              <p className="card__links">
+                {project.url && (
+                  <a href={project.url} target="_blank" rel="noreferrer">
+                    Live ↗
+                  </a>
+                )}
+                {project.repo && (
+                  <a href={project.repo} target="_blank" rel="noreferrer">
+                    Source ↗
+                  </a>
+                )}
+              </p>
             )}
           </article>
         ))}

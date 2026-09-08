@@ -19,6 +19,7 @@ export interface ProjectItem {
   description: string;
   tech: string[];
   url: string | null;
+  repo: string | null;
 }
 
 export interface Profile {
