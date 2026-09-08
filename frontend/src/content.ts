@@ -64,7 +64,7 @@ export const content: SiteContent = {
       location: "Santa Clara, CA",
       start: "Soon",
       end: "Present",
-      logo: "img/logos/palo-alto-networks.png",
+      logo: "img/logos/palo-alto-networks.webp",
       blurb: "Joining as a software engineer — more to come.",
     },
     {
@@ -90,7 +90,7 @@ export const content: SiteContent = {
       location: "Vancouver, WA",
       start: "May 2024",
       end: "Aug 2024",
-      logo: "img/logos/hp.png",
+      logo: "img/logos/hp.webp",
       blurb: "Forecasting and a hardware-auth demo for the print business.",
       highlights: [
         "Prophet time-series models forecasting HP+ PaaS unit loss.",
@@ -105,7 +105,7 @@ export const content: SiteContent = {
       location: "San Mateo, CA",
       start: "May 2023",
       end: "Sep 2023",
-      logo: "img/logos/openprise.png",
+      logo: "img/logos/openprise.jpg",
       blurb: "ML classification and an LLM support chatbot.",
       highlights: [
         "Improved bot task-classification accuracy ~30% with a " +

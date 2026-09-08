@@ -78,7 +78,15 @@ Expected files (all optional):
 `.github/workflows/deploy.yml` builds and deploys on every push to `main`.
 
 One-time setup: repo **Settings → Pages → Build and deployment → Source:
-GitHub Actions**.
+GitHub Actions**. Until this is done the `deploy` job fails with
+`404 ... Ensure GitHub Pages has been enabled`.
+
+> **Private repo:** GitHub Pages for a private repository requires a paid plan
+> (GitHub Pro / Team / Enterprise). On the free plan, either make the repo
+> public or deploy the static build elsewhere — **Cloudflare Pages** and
+> **Netlify** both host from a private repo for free, auto-deploy on push, and
+> just need build command `npm run build`, output dir `frontend/dist`, and
+> (for Cloudflare) build root `frontend`. Set `VITE_BASE=/` for those.
 
 The workflow builds with `VITE_BASE=/teeny_personal_website/`, so the site lands
 at `https://curryman888x.github.io/teeny_personal_website/`.
