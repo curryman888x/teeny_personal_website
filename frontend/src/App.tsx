@@ -1,46 +1,30 @@
-import { useEffect, useState } from "react";
-
-import { getProfile } from "./api";
-import type { Profile } from "./types";
+import { content } from "./content";
+import { Nav } from "./components/Nav";
 import { Hero } from "./components/Hero";
+import { About } from "./components/About";
+import { Education } from "./components/Education";
 import { Experience } from "./components/Experience";
 import { Projects } from "./components/Projects";
-import { ContactForm } from "./components/ContactForm";
+import { Gallery } from "./components/Gallery";
+import { Contact } from "./components/Contact";
 
 export default function App() {
-  const [profile, setProfile] = useState<Profile | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    getProfile()
-      .then(setProfile)
-      .catch((e: unknown) => setError(e instanceof Error ? e.message : "Failed to load"));
-  }, []);
-
   return (
-    <div className="page">
-      <main className="container">
-        {error && (
-          <p className="notice notice--error">
-            Couldn&apos;t reach the API ({error}). Is the backend running on port 8000?
-          </p>
-        )}
+    <>
+      <Nav />
+      <Hero content={content} />
+      <About content={content} />
+      {content.education.length > 0 && <Education items={content.education} />}
+      {content.experience.length > 0 && <Experience items={content.experience} />}
+      {content.projects.length > 0 && <Projects items={content.projects} />}
+      {content.gallery && content.gallery.images.length > 0 && (
+        <Gallery section={content.gallery} />
+      )}
+      <Contact content={content} />
 
-        {!profile && !error && <p className="notice">Loading…</p>}
-
-        {profile && (
-          <>
-            <Hero profile={profile} />
-            <Experience items={profile.experience} />
-            <Projects items={profile.projects} />
-            <ContactForm />
-          </>
-        )}
-      </main>
-
-      <footer className="container footer">
-        <span>© {new Date().getFullYear()} Tyler Ni</span>
+      <footer className="site-footer">
+        © {new Date().getFullYear()} {content.name}
       </footer>
-    </div>
+    </>
   );
 }
