@@ -65,16 +65,19 @@ backend first (or the profile fetch will just fall back to nothing until it is u
 teeny_personal_website/
 ├── compose.yaml             local dev stack (frontend + backend)
 ├── frontend/
+│   ├── public/             served at site root, copied as-is (resume.pdf, favicon, …)
+│   │   └── resources/      misc downloadable files
 │   ├── src/
-│   │   ├── components/      Hero, Experience, Projects, ContactForm
-│   │   ├── api.ts           typed fetch helpers
-│   │   ├── types.ts         shared response shapes
+│   │   ├── assets/         images imported into components (Vite hashes/optimizes)
+│   │   ├── components/     Hero, Experience, Projects, ContactForm
+│   │   ├── api.ts          typed fetch helpers
+│   │   ├── types.ts        shared response shapes
 │   │   ├── App.tsx
 │   │   ├── main.tsx
-│   │   └── styles.css       single stylesheet, themed with CSS variables
+│   │   └── styles.css      single stylesheet, themed with CSS variables
 │   ├── index.html
-│   ├── Dockerfile           dev image (Vite dev server)
-│   └── vite.config.ts       dev proxy /api -> backend
+│   ├── Dockerfile          dev image (Vite dev server)
+│   └── vite.config.ts      dev proxy /api -> backend
 └── backend/
     ├── app/
     │   ├── main.py           FastAPI app + routes
@@ -91,6 +94,20 @@ teeny_personal_website/
 Most of what shows on the page comes from **`backend/app/data.py`**. Update the
 `PROFILE` object there (name, tagline, about, experience, projects, links) and the
 frontend picks it up on next load.
+
+## Static assets (images, résumé, downloads)
+
+Two homes, by how the file is used:
+
+| Kind | Location | How to reference |
+| --- | --- | --- |
+| Downloads / files linked by stable URL — résumé PDF, slide decks, favicon, OG image | `frontend/public/` | absolute URL: `<a href="/resume.pdf">`, `href="/resources/deck.pdf"` |
+| Images rendered *inside* a component | `frontend/src/assets/` | `import photo from "./assets/me.jpg"` — Vite hashes and optimizes it |
+
+Both are committed and deploy with the frontend build. The repo is private, but
+whatever lands in `public/` is downloadable from the live site — fine for a
+résumé link, just strip a home address / phone number from the PDF first if it
+has one. See `frontend/public/README.md`.
 
 ## Common tasks
 

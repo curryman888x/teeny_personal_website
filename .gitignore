@@ -20,12 +20,10 @@ backend/contact_messages.jsonl
 .env.*
 !.env.example
 
-# --- PII / personal docs (keep out of the public repo) ---
-*.pdf
-*resume*
-*Resume*
-*cv*
-contact_messages.jsonl
+# --- Loose files at repo root ---
+# The original résumé upload lives at the repo root as a scratch copy; keep it
+# out of git. Real site assets go in frontend/public/ or frontend/src/assets/.
+/*.pdf
 
 # --- Editor / OS ---
 .DS_Store
