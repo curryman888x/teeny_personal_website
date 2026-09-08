@@ -22,6 +22,9 @@ jobs:
         working-directory: frontend
     steps:
       - uses: actions/checkout@v4
+      # Enables GitHub Pages for the repo on first run (build_type: workflow),
+      # so you don't have to flip the switch in Settings -> Pages by hand.
+      - uses: actions/configure-pages@v5
       - uses: actions/setup-node@v4
         with:
           node-version: 22

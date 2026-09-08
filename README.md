@@ -77,9 +77,12 @@ Expected files (all optional):
 
 `.github/workflows/deploy.yml` builds and deploys on every push to `main`.
 
-One-time setup: repo **Settings → Pages → Build and deployment → Source:
-GitHub Actions**. Until this is done the `deploy` job fails with
-`404 ... Ensure GitHub Pages has been enabled`.
+The workflow's `actions/configure-pages` step enables Pages automatically on the
+first run. If that step can't (org policy, permissions), enable it by hand:
+repo **Settings → Pages → Build and deployment → Source: GitHub Actions**, then
+re-run the job. Until Pages is enabled the `deploy` job fails with
+`404 ... Ensure GitHub Pages has been enabled` — making the repo public is not
+enough, the source still has to be set.
 
 > **Private repo:** GitHub Pages for a private repository requires a paid plan
 > (GitHub Pro / Team / Enterprise). On the free plan, either make the repo
