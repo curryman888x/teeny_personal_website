@@ -22,12 +22,6 @@ jobs:
         working-directory: frontend
     steps:
       - uses: actions/checkout@v4
-      # Tries to enable GitHub Pages for the repo (build_type: workflow).
-      # If this still 404s, enable it once by hand: Settings -> Pages ->
-      # Build and deployment -> Source: GitHub Actions, then re-run.
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - uses: actions/setup-node@v4
         with:
           node-version: 22
