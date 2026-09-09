@@ -26,9 +26,7 @@ export const content: SiteContent = {
       "that keep them reliable. I like building software tools that serve a concrete " +
       "purpose. I'm about to join Palo Alto Networks as a software engineer.",
     portrait: "img/portrait.jpg", // add frontend/public/img/portrait.jpg
-    // To show the "Resume ↓" link: put a (scrubbed) PDF at
-    // frontend/public/resume.pdf and uncomment the next line.
-    // resumeFile: "resume.pdf",
+    resumeFile: "resume.pdf", // frontend/public/resume.pdf (scrubbed — no address/phone)
     details: [
       { label: "Name", value: "Tyler Ni" },
       { label: "Location", value: "Redwood Shores, CA" },
