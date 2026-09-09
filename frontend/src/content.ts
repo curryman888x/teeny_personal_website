@@ -26,6 +26,9 @@ export const content: SiteContent = {
       "that keep them reliable. I like building software tools that serve a concrete " +
       "purpose. I'm about to join Palo Alto Networks as a software engineer.",
     portrait: "img/portrait.jpg", // add frontend/public/img/portrait.jpg
+    // To show the "Resume ↓" link: put a (scrubbed) PDF at
+    // frontend/public/resume.pdf and uncomment the next line.
+    // resumeFile: "resume.pdf",
     details: [
       { label: "Name", value: "Tyler Ni" },
       { label: "Location", value: "Redwood Shores, CA" },
@@ -33,7 +36,6 @@ export const content: SiteContent = {
       { label: "Favorite Food", value: "Braised pork rice (滷肉飯)" },
       { label: "Current Show", value: "Bleach: Thousand-Year Blood War" },
     ],
-    resumeFile: "resume.pdf", // add a (scrubbed) frontend/public/resume.pdf
   },
 
   education: [
