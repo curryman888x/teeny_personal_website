@@ -13,7 +13,6 @@ export const content: SiteContent = {
 
   hero: {
     greeting: "Hi, I'm",
-    tagline: "Software engineer · incoming SWE at Palo Alto Networks",
     image: "img/hero.jpg", // add frontend/public/img/hero.jpg (falls back to a gradient)
   },
 
