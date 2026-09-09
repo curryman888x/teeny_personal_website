@@ -30,10 +30,9 @@ export const content: SiteContent = {
     details: [
       { label: "Name", value: "Tyler Ni" },
       { label: "Location", value: "Redwood Shores, CA" },
-      // Add more rows to taste, mirroring the reference site:
-      // { label: "Hobbies", value: "..." },
-      // { label: "Favorite Food", value: "..." },
-      // { label: "Currently", value: "..." },
+      { label: "Hobbies", value: "Violin, soccer, climbing" },
+      { label: "Favorite Food", value: "Braised pork rice (滷肉飯)" },
+      { label: "Current Show", value: "Bleach: Thousand-Year Blood War" },
     ],
     resumeFile: "resume.pdf", // add a (scrubbed) frontend/public/resume.pdf
   },
