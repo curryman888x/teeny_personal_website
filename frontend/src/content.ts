@@ -159,16 +159,6 @@ export const content: SiteContent = {
     ],
   },
 
-  skills: [
-    "Python",
-    "TypeScript",
-    "React",
-    "FastAPI",
-    "PostgreSQL",
-    "Kafka",
-    "LangGraph",
-    "PyTorch",
-    "SQL",
-    "C / C++",
-  ],
+  // Shown as a tag row under the About section. Empty = hidden.
+  skills: [],
 };
