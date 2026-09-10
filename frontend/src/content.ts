@@ -141,15 +141,6 @@ export const content: SiteContent = {
       repo: "https://github.com/Chen-zexi/LangAlpha",
       image: "img/projects/langalpha.png",
     },
-    {
-      name: "This site",
-      subtitle: "The page you're on",
-      description:
-        "React + TypeScript, content authored in a single typed module, built with Vite " +
-        "and deployed to GitHub Pages by a GitHub Actions workflow.",
-      tech: ["React", "TypeScript", "Vite", "GitHub Pages"],
-      repo: "https://github.com/curryman888x/teeny_personal_website",
-    },
   ],
 
   // Optional photo section, like the reference site's "Baseball" carousel. Add
