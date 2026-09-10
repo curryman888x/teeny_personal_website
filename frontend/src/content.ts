@@ -128,6 +128,20 @@ export const content: SiteContent = {
       image: "img/projects/boba.png",
     },
     {
+      name: "LangAlpha",
+      subtitle: "A multi-agent system for equity research",
+      description:
+        "Orchestrates a supervisor, planner, and specialized agents (researcher, market, " +
+        "browser, coder, analyst, reporter) over LangGraph to turn a plain-language question " +
+        "about a stock into a structured report. Pulls quantitative data from Polygon and " +
+        "Yahoo Finance and qualitative context from Tavily and news APIs, runs deep web " +
+        "research with Playwright when needed, and persists runs in MongoDB. FastAPI service, " +
+        "packaged with Docker Compose.",
+      tech: ["Python", "LangGraph", "LangChain", "FastAPI", "MongoDB", "Playwright", "Docker"],
+      repo: "https://github.com/Chen-zexi/LangAlpha",
+      image: "img/projects/langalpha.png",
+    },
+    {
       name: "This site",
       subtitle: "The page you're on",
       description:
