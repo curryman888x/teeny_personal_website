@@ -67,10 +67,10 @@ export const content: SiteContent = {
     },
     {
       company: "C.H. Robinson",
-      role: "Software Engineer",
+      role: "Data Science Intern → Software Engineer I → Software Engineer II",
       location: "Redwood City, CA",
       start: "Jun 2025",
-      end: "2026",
+      end: "Sep 2026",
       logo: "img/logos/ch-robinson.png",
       blurb: "Data/ML platform work — pricing engines, workflow orchestration, LLM pipelines.",
       highlights: [
