@@ -24,7 +24,7 @@ export const content: SiteContent = {
       "and ML infrastructure across internships and full-time work: real-time pricing " +
       "engines, agentic LLM pipelines, and the workflow orchestration and observability " +
       "that keep them reliable. I like building software tools that serve a concrete " +
-      "purpose. I'm about to join Palo Alto Networks as a software engineer.",
+      "purpose.",
     portrait: "img/portrait.jpg", // add frontend/public/img/portrait.jpg
     resumeFile: "resume.pdf", // frontend/public/resume.pdf (scrubbed — no address/phone)
     details: [
@@ -58,12 +58,12 @@ export const content: SiteContent = {
   experience: [
     {
       company: "Palo Alto Networks",
-      role: "Software Engineer (incoming)",
+      role: "Software Engineer",
       location: "Santa Clara, CA",
-      start: "Soon",
+      start: "Sep 2026",
       end: "Present",
       logo: "img/logos/palo-alto-networks.webp",
-      blurb: "Joining as a software engineer — more to come.",
+      blurb: "Just joined as a software engineer — more to come.",
     },
     {
       company: "C.H. Robinson",
