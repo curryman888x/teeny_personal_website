@@ -47,8 +47,9 @@ export const content: SiteContent = {
         {
           label: "Relevant coursework",
           courses:
-            "Fundamentals of Machine Learning, Programming & Data Science, " +
-            "Statistics / Regression, Data Structures",
+            "Fundamentals of Machine Learning, Projects in Programming & Data Science, " +
+            "Statistics / Regression, Data Structures, Computer Systems and Organizations, " +
+            "Applied Internet Technology, Predictive Analytics, Advanced Topics in Data Science",
         },
       ],
       notes: ["Cumulative GPA 3.7 · Dean's List"],
