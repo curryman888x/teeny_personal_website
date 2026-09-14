@@ -73,32 +73,6 @@ Expected files (all optional):
 | `img/gallery/*.jpg` | optional carousel (uncomment `gallery` in `content.ts`) |
 | `resume.pdf` | the "Resume ↓" link in About — use a copy without home address / phone |
 
-## Deploying to GitHub Pages
-
-`.github/workflows/deploy.yml` builds and deploys on every push to `main`.
-
-The workflow's `actions/configure-pages` step enables Pages automatically on the
-first run. If that step can't (org policy, permissions), enable it by hand:
-repo **Settings → Pages → Build and deployment → Source: GitHub Actions**, then
-re-run the job. Until Pages is enabled the `deploy` job fails with
-`404 ... Ensure GitHub Pages has been enabled` — making the repo public is not
-enough, the source still has to be set.
-
-> **Private repo:** GitHub Pages for a private repository requires a paid plan
-> (GitHub Pro / Team / Enterprise). On the free plan, either make the repo
-> public or deploy the static build elsewhere — **Cloudflare Pages** and
-> **Netlify** both host from a private repo for free, auto-deploy on push, and
-> just need build command `npm run build`, output dir `frontend/dist`, and
-> (for Cloudflare) build root `frontend`. Set `VITE_BASE=/` for those.
-
-The workflow builds with `VITE_BASE=/teeny_personal_website/`, so the site lands
-at `https://curryman888x.github.io/teeny_personal_website/`.
-
-- **User site instead** (`curryman888x.github.io`): rename the repo to
-  `curryman888x.github.io` and change `VITE_BASE` to `/` in the workflow.
-- **Custom domain**: set `VITE_BASE: /`, add `frontend/public/CNAME` containing
-  the domain, and point DNS at GitHub Pages.
-
 ## Contact form (optional)
 
 The Contact section always shows email + social links. To also render a working
