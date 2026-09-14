@@ -74,14 +74,6 @@ export const content: SiteContent = {
       end: "Sep 2026",
       logo: "img/logos/ch-robinson.png",
       blurb: "Data/ML platform work — pricing engines, workflow orchestration, LLM pipelines.",
-      highlights: [
-        "Real-time pricing engine over historical moved-load data using geospatial lane " +
-          "queries and percentile-based costing with confidence scoring.",
-        "Distributed workflow + observability framework: step-level execution, structured " +
-          "error classification, Kafka-based event logging.",
-        "Multi-agent LLM pipeline (LangGraph, RAG over PGVector) for automated peer " +
-          "financial-document analysis.",
-      ],
     },
     {
       company: "HP",
@@ -91,12 +83,6 @@ export const content: SiteContent = {
       end: "Aug 2024",
       logo: "img/logos/hp.webp",
       blurb: "Forecasting and a hardware-auth demo for the print business.",
-      highlights: [
-        "Prophet time-series models forecasting HP+ PaaS unit loss.",
-        "Databricks SQL dashboards over 10B+ rows informing investment decisions.",
-        "Full-stack auth system on a Raspberry Pi (Node.js, C++, Flask) on AWS for IoT " +
-          "device comms; explored post-quantum (SPHINCS+) signatures.",
-      ],
     },
     {
       company: "Openprise",
@@ -106,11 +92,6 @@ export const content: SiteContent = {
       end: "Sep 2023",
       logo: "img/logos/openprise.jpg",
       blurb: "ML classification and an LLM support chatbot.",
-      highlights: [
-        "Improved bot task-classification accuracy ~30% with a " +
-          "CountVectorizer / TF-IDF / LogisticRegression pipeline.",
-        "Built a multimodal LLM support chatbot (PDF + video) and its React front end.",
-      ],
     },
   ],
 
@@ -144,16 +125,14 @@ export const content: SiteContent = {
     },
   ],
 
-  // Optional photo section, like the reference site's "Baseball" carousel. Add
-  // images under frontend/public/img/gallery/ and uncomment:
-  // gallery: {
-  //   title: "Outside Work",
-  //   intro: "A few photos.",
-  //   images: [
-  //     { src: "img/gallery/1.jpg", alt: "..." },
-  //     { src: "img/gallery/2.jpg", alt: "..." },
-  //   ],
-  // },
+  gallery: {
+    title: "Pets",
+    intro: "A few photos of my pets.",
+    images: [
+      { src: "img/gallery/pet-1.jpeg", alt: "My dog curled up in a dog bed" },
+      // Add more with: { src: "img/gallery/pet-2.jpeg", alt: "..." },
+    ],
+  },
 
   contact: {
     heading: "Contact Me!",
